@@ -1,5 +1,5 @@
 resource "github_repository" "gget" {
-  name       = "gget"
+  name       = "git-remote-get"
   visibility = "public"
 }
 

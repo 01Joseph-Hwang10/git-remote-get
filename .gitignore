@@ -19,3 +19,6 @@ build/
 
 # Nx
 .nx
+
+# Environment variables
+*.env*

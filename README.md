@@ -1,3 +1,4 @@
-# gget
+# git-remote-get
 
-> TODO: description
+Download single files or directories from a git remote repository without cloning its entire contents.
+
