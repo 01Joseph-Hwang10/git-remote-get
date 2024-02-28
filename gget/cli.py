@@ -13,7 +13,10 @@ load_dotenv()
     "--repo",
     "repo",
     envvar="GGET_REPO",
-    help="The repo to get the file from",
+    help=(
+        "The repo to get the file from. "
+        "You can also set the GGET_REPO environment variable to set this option."
+    ),
 )
 @click.option(
     "--from",
@@ -24,7 +27,10 @@ load_dotenv()
     "--owner",
     envvar="GGET_OWNER",
     required=True,
-    help="The owner of the repo to get the file from",
+    help=(
+        "The owner of the repo to get the file from. "
+        "You can also set the GGET_OWNER environment variable to set this option."
+    ),
 )
 @click.option(
     "--provider",
@@ -32,18 +38,22 @@ load_dotenv()
     default="github",
     type=click.Choice(["github"]),
     help=(
-        "The remote repository provider to get the file from. Defaults to github"
-        "Currently, only github is supported"
+        "The remote repository provider to get the file from. Defaults to github. "
+        "Currently, only github is supported. "
+        "You can set the GGET_PROVIDER environment variable to set this option. "
     ),
 )
 @click.option(
     "--ref",
     envvar="GGET_REF",
     default="master",
-    help="Branch or commit to get the file from. Defaults to master",
+    help=(
+        "Branch or commit to get the file from. Defaults to master. "
+        "You can set the GGET_REF environment variable to set this option."
+    ),
 )
 def cli(path, destination, repo, from_, owner, provider, ref):
-    """Get a file from a remote repository
+    """Get a file from a remote git repository
 
     Arguments:
         PATH: The path on the remote repository to get the file from

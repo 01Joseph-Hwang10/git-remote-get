@@ -10,7 +10,6 @@ env:
 
 jobs:
   release:
-    if: ${{ false }}
     runs-on: ubuntu-latest
     concurrency: release
     permissions:
