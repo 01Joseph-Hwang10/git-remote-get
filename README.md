@@ -38,6 +38,19 @@ Options:
 
 You can also use the `gget` alias for `git-remote-get`.
 
+## `.env` template
+
+You can create a `.env` file in the root of your project 
+to set default options for the program.
+
+```bash
+# .env
+GGET_OWNER='<your-git-remote-repository-owner-name>'
+GGET_REPO='<your-git-remote-repository-name>'
+GGET_PROVIDER='github'
+GGET_REF='<your-git-remote-repository-branch-or-commit>'
+```
+
 ## Examples
 
 ```bash
