@@ -66,3 +66,11 @@ gget examples/tutorial --owner=pallets --repo=flask --ref=main
 # Contents under `examples/tutorial` will be saved to `tutorial-contents` directory.
 gget examples/tutorial --owner=pallets --repo=flask --ref=main tutorial-contents
 ```
+
+## Contributing
+
+Any contribution is welcome! Check out [CONTRIBUTING.md](https://github.com/01Joseph-Hwang10/git-remote-get/blob/master/.github/CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](https://github.com/01Joseph-Hwang10/git-remote-get/blob/master/.github/CODE_OF_CONDUCT.md) for more information on how to get started.
+
+## License
+
+`git-remote-get` is licensed under a [MIT License](https://github.com/01Joseph-Hwang10/git-remote-get/blob/master/LICENSE).

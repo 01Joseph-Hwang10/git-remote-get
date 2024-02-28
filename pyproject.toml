@@ -98,17 +98,7 @@ allowed_tags = [
   "test",
 ]
 minor_tags = ["feat"]
-patch_tags = [
-  "fix",
-  "perf",
-  "build",
-  "chore",
-  "ci",
-  "docs",
-  "style",
-  "refactor",
-  "test",
-]
+patch_tags = ["fix"]
 
 [tool.semantic_release.remote]
 name = "origin"
