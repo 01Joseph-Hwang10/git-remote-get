@@ -2,6 +2,20 @@
 
 
 
+## [0.2.0](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.1.0...git-remote-get-v0.2.0) (2024-03-01)
+
+
+### Features
+
+* add description to pyproject.toml ([a99574d](https://github.com/01Joseph-Hwang10/git-remote-get/commit/a99574d94df54c5ba83817ec938a5dcf63f9446e))
+* impl gget for github ([ba22ca5](https://github.com/01Joseph-Hwang10/git-remote-get/commit/ba22ca54e38123a42f6f5da992a1bb20aa86f96a))
+
+
+### Documentation
+
+* update docs [no ci] ([5c295c4](https://github.com/01Joseph-Hwang10/git-remote-get/commit/5c295c410f11a0655110825f635f8a7df5a35585))
+* update readme [no ci] ([3de5bf0](https://github.com/01Joseph-Hwang10/git-remote-get/commit/3de5bf0fab8c325fadeb376a2cbb161d5afb96f2))
+
 ## v0.1.0 (2024-02-28)
 
 ### Chore
