@@ -7,6 +7,11 @@ variable "github_owner" {
   EOT
 }
 
+variable "github_pat" {
+  type      = string
+  sensitive = true
+}
+
 variable "pypi_username" {
   type      = string
   sensitive = true

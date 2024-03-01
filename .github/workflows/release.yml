@@ -1,0 +1,64 @@
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: Release and publish packages
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GH_PAT }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+      # Check-out the repository
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        with:
+          ref: ${{ github.event.after }}
+
+      # Set up Python
+      - uses: actions/setup-python@v2
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        with:
+          python-version: 3.11
+
+      # Set up Poetry
+      - uses: snok/install-poetry@v1
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      # Load cached dependencies
+      - name: Load cached venv
+        id: cache-dependencies
+        uses: actions/cache@v3
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      # Install dependencies
+      - if: ${{ steps.release.outputs.release_created == 'true' && steps.cache-dependencies.outputs.cache-hit != 'true' }}
+        run: poetry install --all-extras
+
+      # Configure basic credentials for PyPI
+      - run: poetry config pypi-token.pypi "${{ secrets.PYPI_PASSWORD }}"
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+
+      # Build and publish package
+      - run: poetry build
+        if: ${{ steps.release.outputs.release_created == 'true' }}
+
+      - run: poetry publish
+        if: ${{ steps.release.outputs.release_created == 'true' }}

@@ -38,5 +38,7 @@ def test_gget_folder():
         output,
     )
 
-    # Assert the file exists
+    # Assert the folder exists
     assert isdir(output)
+
+    # TODO: Check the validity of contents of the folder
