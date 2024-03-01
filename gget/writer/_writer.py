@@ -4,7 +4,6 @@ from gget.platform import Dirent, File, Directory
 
 
 class DirentWriter:
-
     def write_file(
         self,
         file: File,

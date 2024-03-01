@@ -25,8 +25,8 @@ git-remote-get = "gget.__main__:cli"
 
 [tool.poe.tasks]
 test = "python -m pytest"
-lint = "flake8 jtd_codebuild"
-check-format = "black jtd_codebuild --check"
+lint = "flake8 gget tests"
+check-format = "black gget tests --check"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
