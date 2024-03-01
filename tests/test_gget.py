@@ -11,7 +11,10 @@ def setup_module():
 
 
 def teardown_module():
-    rmtree(_TEST_FILE_DIST_PREFIX)
+    rmtree(
+        _TEST_FILE_DIST_PREFIX,
+        ignore_errors=True,
+    )
 
 
 def test_gget_file():

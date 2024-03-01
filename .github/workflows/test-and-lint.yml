@@ -30,6 +30,8 @@ jobs:
         run: poetry install --all-extras
 
       - run: poetry run poe test tests
+        env:
+          GITHUB_PAT: ${{ secrets.GH_PAT }}
 
   lint:
     runs-on: ubuntu-latest
