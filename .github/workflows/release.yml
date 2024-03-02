@@ -39,19 +39,6 @@ jobs:
           virtualenvs-create: true
           virtualenvs-in-project: true
 
-      # Load cached dependencies
-      - name: Load cached venv
-        id: cache-dependencies
-        uses: actions/cache@v3
-        if: ${{ steps.release.outputs.release_created == 'true' }}
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-      # Install dependencies
-      - if: ${{ steps.release.outputs.release_created == 'true' && steps.cache-dependencies.outputs.cache-hit != 'true' }}
-        run: poetry install --all-extras
-
       # Configure basic credentials for PyPI
       - run: poetry config pypi-token.pypi "${{ secrets.PYPI_PASSWORD }}"
         if: ${{ steps.release.outputs.release_created == 'true' }}
