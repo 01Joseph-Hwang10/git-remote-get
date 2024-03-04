@@ -2,6 +2,13 @@
 
 
 
+## [0.2.1](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.2.0...git-remote-get-v0.2.1) (2024-03-04)
+
+
+### Dependencies
+
+* update python version for wider support ([8e6bef1](https://github.com/01Joseph-Hwang10/git-remote-get/commit/8e6bef1f70be720e919182f20b79eb840e07f33c))
+
 ## [0.2.0](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.1.0...git-remote-get-v0.2.0) (2024-03-01)
 
 
