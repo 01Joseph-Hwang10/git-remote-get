@@ -1,5 +1,7 @@
 # git-remote-get
 
+[![PyPI version](https://badge.fury.io/py/git-remote-get.svg)](https://pypi.org/project/git-remote-get) [![Testsuite](https://github.com/01Joseph-Hwang10/git-remote-get/workflows/Test%20and%20Lint/badge.svg)](https://github.com/01Joseph-Hwang10/git-remote-get/actions?query=workflow%3A"Test+and+Lint") [![Python version](https://img.shields.io/pypi/pyversions/git-remote-get.svg)](https://pypi.org/project/git-remote-get)
+
 Download single files or directories from a git remote repository without cloning its entire contents.
 
 ## Installation
