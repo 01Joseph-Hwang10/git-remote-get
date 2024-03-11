@@ -1,9 +1,11 @@
 import click
+from os import getcwd
+from os.path import join
 from dotenv import load_dotenv
 from ._get_remote_file import get_remote_file
 
-# Load the environment variables
-load_dotenv()
+# Load the environment variables from current working directory
+load_dotenv(join(getcwd(), ".env"))
 
 
 @click.command()
