@@ -2,6 +2,24 @@
 
 
 
+## [0.2.2](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.2.1...git-remote-get-v0.2.2) (2024-03-11)
+
+
+### Bug Fixes
+
+* load env var from cwd ([c1b8726](https://github.com/01Joseph-Hwang10/git-remote-get/commit/c1b872617b121a6a2e7ef8d007baaf538c9bca32))
+
+
+### Dependencies
+
+* update classifiers up to python 13 ([daf9553](https://github.com/01Joseph-Hwang10/git-remote-get/commit/daf9553a1d2ebf6d79b9b7532c04b52e656c013a))
+
+
+### Documentation
+
+* add badges ([279fdf0](https://github.com/01Joseph-Hwang10/git-remote-get/commit/279fdf092838e8c2c4bb9719137fcd73bb1a1e5b))
+* add badges ([3acc26a](https://github.com/01Joseph-Hwang10/git-remote-get/commit/3acc26af2e132d267d8b62a1a49eed3e3c4b809e))
+
 ## [0.2.1](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.2.0...git-remote-get-v0.2.1) (2024-03-04)
 
 
