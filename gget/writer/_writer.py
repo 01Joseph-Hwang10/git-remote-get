@@ -10,7 +10,7 @@ class DirentWriter:
         path: str,
     ) -> None:
         makedirs(dirname(path), exist_ok=True)
-        with open(path, "w") as f:
+        with open(path, "wb") as f:
             f.write(file.get_contents())
 
     def write_directory(

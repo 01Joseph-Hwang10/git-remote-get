@@ -26,14 +26,14 @@ class GithubFile(File):
             file=remote_file,
         )
 
-    def get_contents(self) -> str:
+    def get_contents(self) -> str | bytes:
         # Decode the file contents
         # or fetch the file contents from `download_url`
         file_contents = None
         if len(self.file.content) > 0:
-            file_contents = self.file.decoded_content.decode("utf-8")
+            file_contents = self.file.decoded_content
         else:
-            file_contents = requests.get(self.file.download_url).text
+            file_contents = requests.get(self.file.download_url).content
         return file_contents
 
 

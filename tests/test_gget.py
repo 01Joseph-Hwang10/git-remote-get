@@ -30,6 +30,9 @@ def test_gget_file():
     # Assert the file exists
     assert isfile(output)
 
+    # TODO: Check if contents are downloaded correctly
+    #       with your eyes
+
 
 def test_gget_folder():
     # Run the get_remote_file function
@@ -44,4 +47,24 @@ def test_gget_folder():
     # Assert the folder exists
     assert isdir(output)
 
-    # TODO: Check the validity of contents of the folder
+    # TODO: Check if contents are downloaded correctly
+    #       with your eyes
+
+
+def test_gget_binary():
+    # Run the get_remote_file function
+    # for non human-readable file
+    output = join(_TEST_FILE_DIST_PREFIX, "geist-banner.png")
+    get_remote_file(
+        ".docs/img/geist-banner--dark.png",
+        "geist-font",
+        "vercel",
+        output,
+        ref="main",
+    )
+
+    # Assert the file exists
+    assert isfile(output)
+
+    # TODO: Check if contents are downloaded correctly
+    #       with your eyes
