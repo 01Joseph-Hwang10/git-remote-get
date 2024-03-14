@@ -2,6 +2,19 @@
 
 
 
+## [0.3.0](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.2.2...git-remote-get-v0.3.0) (2024-03-14)
+
+
+### Features
+
+* add token flag for passing github pat ([b8d0b0d](https://github.com/01Joseph-Hwang10/git-remote-get/commit/b8d0b0d4828bbf083b5db0ace9f6c3fd3fd2ba32))
+
+
+### Bug Fixes
+
+* can download binary files ([f5dd2ad](https://github.com/01Joseph-Hwang10/git-remote-get/commit/f5dd2ad8dfb010bab81389274ff3ba41cd7e368b))
+* ref option is now on HEAD ([10d12c1](https://github.com/01Joseph-Hwang10/git-remote-get/commit/10d12c1caeabbbf21bcd0c3e1b0088c93999897d))
+
 ## [0.2.2](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.2.1...git-remote-get-v0.2.2) (2024-03-11)
 
 
