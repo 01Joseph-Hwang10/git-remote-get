@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "git-remote-get"
-version = "0.2.2"
+version = "0.3.0"
 description = "Download single files or directories from a git remote repository without cloning its entire contents."
 authors = ["01Joseph-Hwang10 <joseph95501@gmail.com>"]
 classifiers = [
