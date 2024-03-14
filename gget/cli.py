@@ -46,6 +46,15 @@ load_dotenv(join(getcwd(), ".env"))
     ),
 )
 @click.option(
+    "--token",
+    help=(
+        "The token to use to authenticate with the remote repository provider"
+        "Since the program only supports github as the provider, "
+        "this option is personal access token in context of github. "
+        "You can set this option using the GITHUB_PAT environment variable."
+    ),
+)
+@click.option(
     "--ref",
     envvar="GGET_REF",
     default="master",
@@ -54,7 +63,16 @@ load_dotenv(join(getcwd(), ".env"))
         "You can set the GGET_REF environment variable to set this option."
     ),
 )
-def cli(path, destination, repo, from_, owner, provider, ref):
+def cli(
+    path,
+    destination,
+    repo,
+    from_,
+    owner,
+    provider,
+    token,
+    ref,
+):
     """Get a file from a remote git repository
 
     Arguments:
@@ -74,5 +92,6 @@ def cli(path, destination, repo, from_, owner, provider, ref):
         owner=owner,
         output=destination or path,
         provider=provider,
+        provider_options={"token": token},
         ref=ref,
     )
