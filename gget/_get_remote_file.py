@@ -13,7 +13,7 @@ def get_remote_file(
     *,
     provider: Literal["github"] = "github",
     provider_options: dict | None = None,
-    ref: str = "master",
+    ref: str = "HEAD",
 ):
     """Get a file from a remote repository"""
     # Get git provider according to the specified provider

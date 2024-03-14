@@ -57,9 +57,9 @@ load_dotenv(join(getcwd(), ".env"))
 @click.option(
     "--ref",
     envvar="GGET_REF",
-    default="master",
+    default="HEAD",
     help=(
-        "Branch or commit to get the file from. Defaults to master. "
+        "Branch or commit to get the file from. Defaults to HEAD. "
         "You can set the GGET_REF environment variable to set this option."
     ),
 )

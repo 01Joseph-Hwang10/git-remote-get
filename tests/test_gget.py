@@ -60,7 +60,6 @@ def test_gget_binary():
         "geist-font",
         "vercel",
         output,
-        ref="main",
     )
 
     # Assert the file exists
