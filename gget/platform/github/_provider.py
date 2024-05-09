@@ -6,12 +6,13 @@ from ._repository import GithubRepository
 
 
 class GithubProvider(GitProvider):
-    def __init__(self, token: str = None):
+    def __init__(self, token: str | None = None):
         pat = token or os.environ.get("GITHUB_PAT", None)
-        if pat is None:
-            raise ValueError("GITHUB_PAT environment variable is not defined")
+        auth = None
+        if pat is not None:
+            auth = Token(pat)
 
-        self.github = Github(auth=Token(pat))
+        self.github = Github(auth=auth)
 
     def get_repository(self, owner: str, repo: str) -> GithubRepository:
         repo = self.github.get_repo(f"{owner}/{repo}")
