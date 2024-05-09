@@ -2,6 +2,13 @@
 
 
 
+## [0.3.1](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.3.0...git-remote-get-v0.3.1) (2024-05-09)
+
+
+### Bug Fixes
+
+* set auth only if token is not none ([d0b0ac7](https://github.com/01Joseph-Hwang10/git-remote-get/commit/d0b0ac763523acbba74796e1d2ed8bcb76c9349b))
+
 ## [0.3.0](https://github.com/01Joseph-Hwang10/git-remote-get/compare/git-remote-get-v0.2.2...git-remote-get-v0.3.0) (2024-03-14)
 
 
